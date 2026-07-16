@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daffa Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=20260717e" />
+  <link rel="stylesheet" href="css/3d-styles.css?v=20260717d" />
+</head>
+
+<body>
+  <div class="bg-wrapper" aria-hidden="true">
+    <div class="bg-gradient"></div>
+    <div class="bg-aurora"></div>
+    <div class="bg-mesh"></div>
+    <div class="bg-mesh bg-mesh-diag"></div>
+    <div class="bg-glow"></div>
+    <div class="bg-scanline"></div>
+    <div class="bg-shapes">
+      <div class="bg-shape bg-shape-1"></div>
+      <div class="bg-shape bg-shape-2"></div>
+      <div class="bg-shape bg-shape-3"></div>
+    </div>
+    <div class="bg-vignette"></div>
+    <div class="bg-frame">
+      <span class="bg-corner bg-corner-tl"></span>
+      <span class="bg-corner bg-corner-tr"></span>
+      <span class="bg-corner bg-corner-bl"></span>
+      <span class="bg-corner bg-corner-br"></span>
+      <span class="bg-orbit"></span>
+    </div>
+  </div>
+  <canvas id="tech-bg" class="tech-canvas" aria-hidden="true"></canvas>
+  <canvas id="three-canvas" class="three-canvas" aria-hidden="true"></canvas>
+
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">Rizqi Daffa Firdaus</div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <header id="home" class="hero">
+    <div class="hero-grid">
+      <div class="hero-content" data-aos="fade-right">
+        <h1>Hi, I'm <span>Rizqi Daffa Firdaus</span></h1>
+        <div class="typewriter" id="typewriter"></div>
+        <p>A Junior Frontend Developer who has a strong interest in building aesthetic and functional digital
+          interfaces.</p>
+        <div class="btn-group">
+          <a href="#contact" class="btn btn-primary">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-media" data-aos="fade-left">
+        <img src="asset/daffa.jpg" alt="Rizqi Daffa Firdaus" class="profile-pic" id="profile-pic">
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2 data-aos="fade-right">About Me</h2>
+    <div class="about-content">
+      <div class="about-text" data-aos="fade-right">
+        <p>I am a motivated newcomer in the field of programming with a strong enthusiasm for continuous learning and
+          personal development. My journey into the tech world began with a simple question: “How do applications
+          actually work?” That curiosity led me to explore coding, and over time, it grew into a deep and ongoing
+          commitment to becoming a skilled developer.</p>
+        <p>What distinguishes me is my ability to quickly adapt to new technologies, workflows, and collaborative
+          environments. I enjoy working in team-based settings where ideas are shared, feedback is valued, and every
+          contribution plays a role in building something meaningful. I believe that great software is born not only
+          from technical skill, but also from a willingness to listen, learn, and iterate together.</p>
+        <p>Beyond writing code, I take pride in my strong communication skills and my comfort with speaking in front of
+          others. I believe that the ability to clearly express ideas is just as important as the ability to implement
+          them. I'm always seeking out new challenges—whether it’s learning a new framework, contributing to a group
+          project, or pushing past technical limitations—that encourage growth and resilience in my professional
+          journey.</p>
+        <div class="btn-group" style="margin-top: 2rem;">
+          <a href="asset/Putih dan Pastel Modern Professional CV Lamaran Kerja Resume.pdf" download="CV_Rizqi_Daffa_Firdaus.pdf" class="btn btn-primary">Download CV</a>
+          <a href="#skills" class="btn btn-outline">My Skills</a>
+        </div>
+      </div>
+      <div class="about-illustration" data-aos="fade-left">
+        <img src="asset/dev-about.png" alt="Frontend developer building interfaces" class="about-visual">
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 data-aos="fade-right">My Skills</h2>
+
+    <div class="skills-container">
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="100">
+        <i class="fab fa-html5"></i>
+        <h3>HTML5</h3>
+        <p>Create a simple structure page</p>
+      </div>
+
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="200">
+        <i class="fab fa-css3-alt"></i>
+        <h3>CSS3</h3>
+        <p>Gives color and style to the page</p>
+      </div>
+
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="300">
+        <i class="fab fa-js"></i>
+        <h3>JavaScript</h3>
+        <p>Adding basic interactions to a website</p>
+      </div>
+
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="400">
+        <i class="fa-brands fa-php"></i>
+        <h3>PHP</h3>
+        <p>Backend development</p>
+      </div>
+
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="500">
+        <i class="fab fa-figma"></i>
+        <h3>Figma</h3>
+        <p>Wireframing Prototyping</p>
+      </div>
+
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="600">
+        <i class="fas fa-database"></i>
+        <h3>Sql</h3>
+        <p>Database</p>
+      </div>
+
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="700">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Responsive Design</h3>
+        <p>Mobile-first approach</p>
+
+      </div>
+
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="900">
+        <i class="fas fa-users"></i>
+        <h3>Teamwork</h3>
+        <p>Collaboration Communication</p>
+
+      </div>
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="1000">
+        <i class="fas fa-pencil"></i>
+        <h3>Technical Writer</h3>
+        <p>Writing Editing Proofreading</p>
+
+      </div>
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="1100">
+        <i class="fab fa-laravel"></i>
+        <h3>Laravel Developer</h3>
+        <p>REST API, Blade </p>
+      </div>
+
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="1200">
+        <img src="asset/flutter.svg" alt="" class="skill-icon">
+        <h3>Flutter Developer</h3>
+        <p>Dart, UI Design, Mysql & Supabase</p>
+      </div>
+
+
+
+
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2 data-aos="fade-right">My last Projects</h2>
+    <div class="portfolio-grid">
+
+      <div class="project-card" data-aos="fade-up">
+        <div class="project-img-wrap">
+          <img src="asset/stock_opname.png" alt="Stock Opname Warehouse" class="project-image">
+        </div>
+        <div class="project-info">
+          <h3>Stock Opname Warehouse</h3>
+          <p>A full-stack warehouse stock opname management system featuring a multi-platform architecture (Web &
+            Mobile) designed to streamline asset auditing through decoupled RESTful API communication using Laravel,
+            Flutter, and MySQL. Features RBAC, QR code scanning, and real-time low-stock alerts.</p>
+          <div class="project-tags">
+            <span class="tag">Laravel</span>
+            <span class="tag">Flutter</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">REST API</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-img-wrap">
+          <img src="asset/emom.png" alt="Electronic Minutes of Meeting E-MoM" class="project-image">
+        </div>
+        <div class="project-info">
+          <h3>Electronic Minutes of Meeting (E-MoM)</h3>
+          <p>A cross-platform meeting minutes management app built with FlutterFlow and Supabase. Features multi-role
+            access for PICs, task assignment per agenda, due date tracking, and a structured meeting dashboard for
+            efficient organizational documentation.</p>
+          <div class="project-tags">
+            <span class="tag">FlutterFlow</span>
+            <span class="tag">Supabase</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-img-wrap">
+          <img src="asset/ruang_aman.png" alt="Ruang Aman App" class="project-image">
+        </div>
+        <div class="project-info">
+          <h3>Ruang Aman – Mental Health App</h3>
+          <p>A mobile mental health support app built with Flutter, designed to provide a safe space for users to
+            express emotions, do self-reflection, and mental health tests. Features include journaling, mental test
+            activities, a chat/report room, and article feeds for wellbeing.</p>
+          <div class="project-tags">
+            <span class="tag">Flutter</span>
+            <span class="tag">Dart</span>
+            <span class="tag">Laravel</span>
+            <span class="tag">MySQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-img-wrap">
+          <img src="asset/veloce_parts.png" alt="Veloce Parts App" class="project-image">
+        </div>
+        <div class="project-info">
+          <h3>Veloce Parts – Sparepart Marketplace</h3>
+          <p>A UI/UX design of a mobile marketplace app for buying and selling vehicle spare parts. Focused on clean
+            navigation, product detail pages, seller information, and an intuitive onboarding experience for
+            automotive enthusiasts.</p>
+          <div class="project-tags">
+            <span class="tag">Figma</span>
+            <span class="tag">UI/UX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="project-img-wrap">
+          <img src="asset/turbo_tech.png" alt="Turbo Tech App" class="project-image">
+        </div>
+        <div class="project-info">
+          <h3>Turbo Tech – Workshop App</h3>
+          <p>A UI/UX design of a mobile app for vehicle repair shop services. Designed to help users find nearby
+            workshops, browse spare parts, book service reservations, and track service history — all in one intuitive
+            and modern interface.</p>
+          <div class="project-tags">
+            <span class="tag">Figma</span>
+            <span class="tag">UI/UX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="project-img-wrap project-img-wrap-carousel">
+          <div class="project-image-carousel" aria-label="PT. Otomedia Jaya inventory screenshots">
+            <div class="project-image-slide">
+              <img src="asset/otomedia1.png" alt="PT. Otomedia Jaya inventory screen 1" class="project-image project-image-carousel-img">
+            </div>
+            <div class="project-image-slide">
+              <img src="asset/otomedia2.png" alt="PT. Otomedia Jaya inventory screen 2" class="project-image project-image-carousel-img">
+            </div>
+          </div>
+          <button type="button" class="carousel-btn carousel-btn-prev" aria-label="Show previous Otomedia image">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button type="button" class="carousel-btn carousel-btn-next" aria-label="Show next Otomedia image">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="project-info">
+          <h3>PT. Otomedia Jaya - Inventory System</h3>
+          <p>An inventory management project for automotive spare parts that combines a clean dashboard interface and
+            operational monitoring in one system. Built with Laravel and MySQL, with mobile-friendly workflow support
+            for stock control, product management, and daily inventory operations.</p>
+          <div class="project-tags">
+            <span class="tag">Laravel</span>
+            <span class="tag">MySQL</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end portfolio-grid -->
+
+  </section>
+
+  <section>
+    <div class="quote-card" data-aos="zoom-in">
+      <p>"I believe that being adaptable is essential in the digital age. I embrace change, learn quickly, and see AI as
+        a collaborative tool to enhance human potential. By combining creativity with technology, we can build
+        meaningful solutions."</p>
+      <div class="author">— Rizqi Daffa Firdaus</div>
+    </div>
+  </section>
+
+
+  <section id="experience">
+    <h2 data-aos="fade-right">Experience &amp; Recognition</h2>
+
+    <!-- Stats Row -->
+    <div class="stats-grid" data-aos="fade-up">
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+        <div class="stat-number" data-count="11">0</div>
+        <div class="stat-label">Certifications</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-layer-group"></i></div>
+        <div class="stat-number" data-count="10">0</div>
+        <div class="stat-label">Technologies Mastered</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+        <div class="stat-number" data-count="2">0</div>
+        <div class="stat-label">Work Experiences</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="stat-number" data-count="3">0</div>
+        <div class="stat-label">Years of Study</div>
+      </div>
+    </div>
+
+    <!-- Two-column layout -->
+    <div class="exp-columns">
+
+      <!-- LEFT: Education + Work Experience -->
+      <div class="exp-col">
+
+        <!-- Education -->
+        <div class="exp-group-label" data-aos="fade-right">
+          <i class="fas fa-graduation-cap"></i> Education
+        </div>
+        <div class="exp-timeline" data-aos="fade-up">
+
+          <div class="exp-item">
+            <div class="exp-dot"></div>
+            <div class="exp-content">
+              <div class="exp-header">
+                <span class="exp-badge exp-badge-edu">D3</span>
+                <span class="exp-year">2023 — 2026</span>
+              </div>
+              <h3>Information Technology (D3)</h3>
+              <p class="exp-place"><i class="fas fa-university"></i> Universitas Brawijaya — Faculty of Vocational Studies</p>
+              <p class="exp-desc">GPA 3.89 · Actively developing web &amp; mobile projects using Laravel, Flutter, and MySQL. Involved in HMPSTI student organization and various technology competitions.</p>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-dot"></div>
+            <div class="exp-content">
+              <div class="exp-header">
+                <span class="exp-badge exp-badge-edu">SMK</span>
+                <span class="exp-year">2020 — 2023</span>
+              </div>
+              <h3>Computer Networking &amp; Engineering</h3>
+              <p class="exp-place"><i class="fas fa-school"></i> SMK Negeri 2 Probolinggo (Vocational High School)</p>
+              <p class="exp-desc">Completed IT Support training via Google – Coursera. Internship at PT Pelabuhan Tanjung Tembaga (Persero) Probolinggo in 2022.</p>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-dot exp-dot-sm"></div>
+            <div class="exp-content exp-content-sm">
+              <div class="exp-header">
+                <span class="exp-badge exp-badge-edu">SMP</span>
+                <span class="exp-year">2017 — 2020</span>
+              </div>
+              <h3>SMP Negeri 2 Probolinggo</h3>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Work Experience -->
+        <div class="exp-group-label" data-aos="fade-right" style="margin-top: 2rem;">
+          <i class="fas fa-briefcase"></i> Work Experience
+        </div>
+        <div class="exp-timeline" data-aos="fade-up">
+
+          <div class="exp-item">
+            <div class="exp-dot exp-dot-work"></div>
+            <div class="exp-content">
+              <div class="exp-header">
+                <span class="exp-badge exp-badge-work">Internship</span>
+                <span class="exp-year">Jul 2025 — Dec 2025</span>
+              </div>
+              <h3>IT Service Management (ITSM)</h3>
+              <p class="exp-place"><i class="fas fa-building"></i> PT Paiton Operation Maintanance Indonesia (POMI)</p>
+              <ul class="exp-list">
+                <li>Developed a mobile &amp; web Stock Opname Warehouse app for inventory recording and warehouse audit activities</li>
+                <li>Built an E-MoM (Electronic Minutes of Meeting) app for structured digital meeting documentation</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="tag">Laravel</span><span class="tag">Flutter</span><span class="tag">MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-dot exp-dot-work"></div>
+            <div class="exp-content">
+              <div class="exp-header">
+                <span class="exp-badge exp-badge-work">Internship</span>
+                <span class="exp-year">Jan 2022 — Jun 2022</span>
+              </div>
+              <h3>IT Support</h3>
+              <p class="exp-place"><i class="fas fa-building"></i> PT Pelabuhan Tanjung Tembaga (Persero) Probolinggo</p>
+              <ul class="exp-list">
+                <li>Router configuration &amp; internet bandwidth management per user</li>
+                <li>Office server maintenance and LAN cable crimping</li>
+                <li>CCTV system configuration to server, PC servicing for employees</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT: Certifications -->
+      <div class="exp-col">
+        <div class="exp-group-label" data-aos="fade-left">
+          <i class="fas fa-certificate"></i> Certifications
+        </div>
+        <div class="cert-list" data-aos="fade-up">
+          <div class="cert-item">
+            <span class="cert-year">2022</span>
+            <div class="cert-info">
+              <p class="cert-name">Work In Tech Award</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <span class="cert-year">2022</span>
+            <div class="cert-info">
+              <p class="cert-name">IT Support Google – Coursera</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <span class="cert-year">2022</span>
+            <div class="cert-info">
+              <p class="cert-name">Internship Certificate — PT Pelabuhan Tanjung Tembaga (Persero)</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <span class="cert-year">2024</span>
+            <div class="cert-info">
+              <p class="cert-name">Best Expert Staff Award — HMPSTI 2024</p>
+              <span class="cert-org">Information Technology Student Association</span>
+            </div>
+          </div>
+          <div class="cert-item">
+            <span class="cert-year">2024</span>
+            <div class="cert-info">
+              <p class="cert-name">Recognition Award — HMPSTI 2024</p>
+              <span class="cert-org">Information Technology Student Association</span>
+            </div>
+          </div>
+          <div class="cert-item">
+            <span class="cert-year">2025</span>
+            <div class="cert-info">
+              <p class="cert-name">Internship Certificate — PT Paiton Operation Maintanance Indonesia (POMI)</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <span class="cert-year">2025</span>
+            <div class="cert-info">
+              <p class="cert-name">Cisco Academy Cybersecurity</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <span class="cert-year">2025</span>
+            <div class="cert-info">
+              <p class="cert-name">Microsoft Office Desktop Application</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <span class="cert-year">2026</span>
+            <div class="cert-info">
+              <p class="cert-name">Web Development Competency Certificate</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <span class="cert-year">2026</span>
+            <div class="cert-info">
+              <p class="cert-name">TOEFL</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Open to Work badge -->
+        <div class="open-badge" data-aos="zoom-in" style="margin-top: 2rem;">
+          <span class="open-dot"></span>
+          <p>Open to full-time roles, freelance &amp; internships</p>
+          <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Let's Talk</a>
+        </div>
+      </div>
+
+    </div><!-- end exp-columns -->
+
+  </section>
+
+
+  <section id="contact">
+    <h2 data-aos="fade-right">Get In Touch</h2>
+    <div class="contact-container">
+      <div class="contact-info" data-aos="fade-right">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-text">
+            <h3>Email</h3>
+            <a href="mailto:daffaproo3@gmail.com">daffaproo3@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="contact-text">
+            <h3>GitHub</h3>
+            <a href="https://github.com/daffa1105" target="_blank">github.com/daffa1105</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fab fa-linkedin"></i>
+          </div>
+          <div class="contact-text">
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/rizqidaffa"
+              target="_blank">linkedin.com/in/rizqidaffa</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-text">
+            <h3>Location</h3>
+            <p>Probolinggo City, Indonesia</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form" data-aos="fade-left">
+        <form>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" class="form-control" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" class="form-control" placeholder="What's this about?" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" class="form-control" placeholder="Tell me about your project or just say hi! 👋" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="social-links">
+      <a href="https://www.instagram.com/rzqi_daffa" class="social-link" target="_blank" rel="noopener noreferrer"><i
+          class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/rizqidaffa" class="social-link" target="_blank" rel="noopener noreferrer"><i
+          class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/daffa1105" class="social-link" target="_blank" rel="noopener noreferrer"><i
+          class="fab fa-github"></i></a>
+    </div>
+    <p class="copyright">© 2025 Rizqi Daffa Firdaus. All rights reserved.</p>
+  </footer>
+
+  <!-- Robot Character Widget -->
+  <div id="char-widget" aria-hidden="true"></div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
+  <script src="js/tech-bg.js?v=20260717d"></script>
+  <script src="js/script.js?v=20260717d"></script>
+  <script src="js/3d-effects.js?v=20260717d"></script>
+  <script src="js/character-anim.js?v=20260717e"></script>
+  <script>
+    /* ── Animated counter for stat numbers ── */
+    (function () {
+      const counters = document.querySelectorAll('.stat-number[data-count]');
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const el  = entry.target;
+          const end = parseInt(el.dataset.count, 10);
+          let cur   = 0;
+          const dur = 1200;
+          const step = end / (dur / 16);
+          const tick = () => {
+            cur = Math.min(cur + step, end);
+            el.textContent = Math.round(cur) + (end >= 10 ? '+' : '+');
+            if (cur < end) requestAnimationFrame(tick);
+            else el.textContent = end + '+';
+          };
+          tick();
+          io.unobserve(el);
+        });
+      }, { threshold: 0.6 });
+      counters.forEach(c => io.observe(c));
+    })();
+  </script>
+</body>
+
+</html>
